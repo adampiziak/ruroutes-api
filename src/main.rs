@@ -2,15 +2,17 @@
 #![plugin(rocket_codegen)]
 
 extern crate rocket;
-extern crate reqwest;
 
-use std::io::Read;
+#[get("/api")]
+fn api() -> &'static str {
+    "Welcome to the Rutgers Link API page."
+}
 
 #[get("/")]
-fn index() -> &' str {
+fn index() -> &'static str {
     "root"
 }
 
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    rocket::ignite().mount("/", routes![index, api]).launch();
 }
