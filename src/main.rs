@@ -19,7 +19,7 @@ fn main() {
 }
 
 fn get_config() -> String {
-    let mut resp = reqwest::get("http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=rutgers&terse");
+    let resp = reqwest::get("http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=rutgers&terse");
     
     let body: String = resp.unwrap().text().unwrap();
     body
