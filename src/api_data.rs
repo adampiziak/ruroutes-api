@@ -1,9 +1,10 @@
+use std::sync::RwLock;
+
 pub struct ApiData {
-    pub config: String,
-    routes: Vec<String>,
+    pub config: RwLock<String>,
+    pub routes: Vec<String>,
 }
 
-
 pub fn new() -> ApiData {
-    ApiData {config: String::from("hey there"), routes: Vec::new()}
+    ApiData {config: RwLock::new(String::new()), routes: Vec::new()}
 }
