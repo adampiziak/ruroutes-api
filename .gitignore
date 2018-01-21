@@ -5,3 +5,5 @@ tmp/
 Cargo.lock
 /target/
 **/*.rs.bk
+task.org
+../favicon.ico
