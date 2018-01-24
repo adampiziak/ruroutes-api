@@ -1,5 +1,6 @@
 use pool::RedisConn;
 use rocket::Route;
+use rocket::response::content::Json;
 use redis::Commands;
 
 #[get("/")]
@@ -8,10 +9,10 @@ fn index() -> &'static str {
 }
 
 #[get("/config")]
-fn config(conn: RedisConn) -> String {
+fn config(conn: RedisConn) -> Json<String> {
     let config: String = conn.get("config").unwrap();
 
-    config
+    Json(config)
 }
 
 

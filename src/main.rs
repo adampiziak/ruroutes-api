@@ -1,6 +1,9 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
+#[macro_use]
+extern crate serde_derive;
+
 extern crate rocket;
 extern crate r2d2;
 extern crate r2d2_redis;
