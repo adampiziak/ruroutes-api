@@ -1,11 +1,11 @@
-#![feature(plugin)]
-#![plugin(rocket_codegen)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
-#[macro_use]
-extern crate serde_derive;
 
-extern crate rocket;
+#[macro_use] extern crate serde_derive;
+#[macro_use] extern crate rocket;
+
 extern crate r2d2;
+
 extern crate r2d2_redis;
 extern crate redis;
 extern crate reqwest;
