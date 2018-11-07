@@ -1,0 +1,37 @@
+use std::collections::HashMap;
+
+struct Campus {
+    tag: String,
+    name: String
+}
+
+impl Campus {
+    fn new(tag: String, name: String) -> Campus {
+        Campus { tag, name }
+    }
+}
+
+
+pub fn getRouteCampusTable() -> HashMap<String, Vec<&'static str>> {
+    let mut campuses = HashMap::new();
+
+    campuses.insert("penn".to_string(), vec!["newark"]);
+    campuses.insert("connect".to_string(), vec!["newark"]);
+    campuses.insert("a".to_string(), vec!["busch", "college ave"]);
+    campuses.insert("b".to_string(), vec!["busch", "livingston"]);
+    campuses.insert("c".to_string(), vec!["busch"]);
+    campuses.insert("ee".to_string(), vec!["college ave", "cook douglass"]);
+    campuses.insert("f".to_string(), vec!["college ave", "cook douglass"]);
+    campuses.insert("h".to_string(), vec!["busch", "college ave"]);
+    campuses.insert("lx".to_string(), vec!["college ave", "livingston"]);
+    campuses.insert("rexl".to_string(), vec!["cook douglass", "livingston"]);
+    campuses.insert("rexb".to_string(), vec!["busch", "cook douglass"]);
+    campuses.insert("w1".to_string(), vec!["college ave"]);
+    campuses.insert("rbhs".to_string(), vec!["downtown"]);
+    campuses.insert("ccexp".to_string(), vec!["newark"]);
+    campuses.insert("kearney".to_string(), vec!["newark"]);
+
+
+    campuses
+}
+

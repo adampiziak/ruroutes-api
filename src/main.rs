@@ -23,6 +23,7 @@ mod api_worker;
 mod routes;
 mod pool;
 mod model;
+mod lookup_table;
 
 fn main() {
     data_fetcher::start(); // Fetch data from nextBus API
@@ -58,4 +59,4 @@ impl Fairing for CORS {
         }
     }
 }
-o
+
